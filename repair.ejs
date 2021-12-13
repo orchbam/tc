@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>บริการซ่อมแซมต้นไม้</title>
+    <link rel="stylesheet"type="text/css"  href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/stylerepair.css"/>
+
+ 
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="card">
+
+            <div class="card-body ">
+
+                    <a href="/home" class="btn btn-primary">Home</a>
+                    <a href="/service" class="btn btn-primary">Service</a>
+                    <a href="/about" class="btn btn-primary">About us</a>
+                    <a href="/contact" class="btn btn-primary">Contact</a>
+                    <a href="/logout" class="btn btn-danger">Logout</a> <!-- ตัวอย่างปุ่ม ลิงค์ไปหน้าอื่นๆ เพิ่ม Get ในหน้า index.js-->
+            </div>
+            
+        </div>
+        <div class="formcontainer">
+            <form action="/repair" method="post">
+                <h1>ยินดีต้อนรับเข้าสู่บริการซ่อมแซมต้นไม้</h1>
+
+                <label for="province">สถานที่ที่ต้องการใช้บริการ</label><br>
+                <select id="rp_province" name="rp_province">
+                    <option value="กรุงเทพฯ">กรุงเทพฯ</option>
+                    <option value="นนทบุรี">นนทบุรี</option>
+                    <option value="สมุทรปราการ">สมุทรปราการ</option>
+                    <option value="นครปฐม">นครปฐม</option>
+                    <option value="ปทุมธานี">ปทุมธานี</option>
+                    <option value="สมุทรสาคร">สมุทรสาคร</option>
+                </select><br>
+    
+                <label for="address">ที่อยู่ที่ต้องการให้ซ่อมแซมต้นไม้</label><br>
+                <input type="text" name="rp_address" id="rp_address"><br>
+    
+                <label for="treetype">ประเภทของต้นไม้</label><br>
+                <select id="rp_treetype" name="rp_treetype">
+                    <option value="ไม้ยืนต้น">ไม้ยืนต้น</option>
+                    <option value="ไม้พุ่ม">ไม้พุ่ม</option>
+                    <option value="ไม้คลุมดิน">ไม้คลุมดิน</option>
+                    <option value="ไม้เลื้อย">ไม้เลื้อย</option>
+                </select><br>
+    
+                <label for="treesick">ระบุอาการ</label><br>
+                <input type="text" name="rp_treesick" id="rp_treesick"><br>
+    
+                
+                <label for="date">ต้องการใช้บริการนี้เมื่อใด</label><br>
+                <input type="date" id="rp_date" name="rp_date"><br><br>
+
+                <label for="rate">อัตราค่าซ่อมแซม (เวลา)</label><br>
+                <select id="rp_rate" name="rp_rate">
+                    <option value="1 h 200">1 ชั่วโมง 200</option>
+                    <option value="2 h 400">2 ชั้วโมง 400</option>
+                    <option value="3 h 600">3 ชั่วโมง 600</option>
+                 </select><br>
+    
+            
+                
+    
+                 <button type="submit" class="btn btn-success">ต่อไป</button>
+               
+    
+            </form>    
+        </div>
+    </div>
+</body>
+</html>

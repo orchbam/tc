@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>บริการให้คำปรึกษาปัญหา</title>
+    <link rel="stylesheet"type="text/css"  href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/stylekratu.css"/>
+
+ 
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="card">
+
+            <div class="card-body ">
+                    <a href="/home" class="btn btn-primary">Home</a>
+                    <a href="/service" class="btn btn-primary">Service</a>
+                    <a href="/about" class="btn btn-primary">About us</a>
+                    <a href="/contact" class="btn btn-primary">Contact</a>
+                    <a href="/logout" class="btn btn-danger">Logout</a> <!-- ตัวอย่างปุ่ม ลิงค์ไปหน้าอื่นๆ เพิ่ม Get ในหน้า index.js-->
+            </div>
+            
+        </div>
+        <div class="formcontainer">
+            <form action="/kratu"method="post">
+                <h1>ยินดีต้อนรับเข้าสู่บริการปรึกษาปัญหา</h1>
+    
+                <h2>จะมีผู้เชี่ยวชาญมาตอบปัญหาที่ท่านได้พบโดยตรง</h2>
+    
+    
+                <label for="typeproblem">หมวดหมู่ปัญหา</label><br>
+                <select id="kt_typeproblem" name="kt_typeproblem">
+                    <option value="leaf">ใบ</option>
+                    <option value="trunk">ลำต้น</option>
+                    <option value="flower">ดอก</option>
+                    <option value="fruit">ผล</option>
+                    <option value="grow">การเติบโต</option>
+                    
+                </select><br>
+                
+                
+                <label for="problem">ระบุปัญหาที่ท่านพบ</label><br>
+                <input type="text" name="kt_problem" id="kt_problem" placeholder="กรุณาระบุปัญหาที่ท่านพบ"><br>
+
+                <label for="tel">หมายเลขโทรศัพท์ของท่าน</label><br>
+                <input type="tel" name="kt_tel" id="kt_tel" ><br>
+                
+                
+                <label for="rate">อัตราค่าปรึกษา (เวลา)</label><br>
+                <select id="kt_rate" name="kt_rate">
+                    <option value="100">1 ชั่วโมง 100 บาท</option>
+                    <option value="200">2 ชั้วโมง 200 บาท</option>
+                    <option value="300">3 ชั่วโมง 300 บาท</option>
+                 </select><br>
+    
+                
+                 <button type="submit" class="btn btn-success">ต่อไป</button>
+               
+    
+            </form>    
+        </div>
+    </div>
+</body>
+</html>

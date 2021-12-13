@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>บริการฝากรดน้ำ</title>
+    <link rel="stylesheet"type="text/css"  href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/stylerodnam.css"/>
+
+ 
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="card">
+
+            <div class="card-body ">
+
+                    <a href="/home" class="btn btn-primary">Home</a>
+                    <a href="/service" class="btn btn-primary">Service</a>
+                    <a href="/about" class="btn btn-primary">About us</a>
+                    <a href="/contact" class="btn btn-primary">Contact</a>
+                    <a href="/logout" class="btn btn-danger">Logout</a> <!-- ตัวอย่างปุ่ม ลิงค์ไปหน้าอื่นๆ เพิ่ม Get ในหน้า index.js-->
+            </div>
+            
+        </div>
+        <div class="formcontainer">
+            <form action="/rodnam" method="post">
+                <h1>ยินดีต้อนรับเข้าสู่บริการฝากรดน้ำต้นไม้</h1>
+                <label for="address">ที่อยู่สำหรับให้บริการ</label><br>
+                <input type="text" name="rm_address" id="rm_address" required><br>
+                <label for="date">ต้องการใช้บริการนี้เมื่อใด</label><br>
+                <input type="date" id="rm_date" name="rm_date" required ><br>
+                <label for="treetype">ประเภทของต้นไม้</label><br>
+                <select id="rm_treetype" name="rm_treetype" required>
+                    <option value="ไม้ยืนต้น">ไม้ยืนต้น</option>
+                    <option value="ไม้พุ่ม">ไม้พุ่ม</option>
+                    <option value="ไม้คลุมดิน">ไม้คลุมดิน</option>
+                    <option value="ไม้เลื้อย">ไม้เลื้อย</option>
+                </select><br>
+    
+                <label for="treeq">จำนวนวัน</label><br>
+                <select id="rm_treeq" name="rm_treeq" required>
+                    <option value="1d 250bath">1วัน 250บาท</option>
+                    <option value="2d 350bath">2วัน 350บาท</option>
+                    <option value="3d 450bath">3วัน 450บาท</option>
+                </select><br>
+      
+                <button type="submit" class="btn btn-success">ต่อไป</button>
+            </form>    
+            <script>
+                const next = () => {
+                    if ( window.confirm ( "Are you sure ?" ) )
+                    {
+                        window.alert ( "you confirm" );
+                    }
+                }  
+           </script>
+
+        </div>
+    </div>
+</body>
+</html>

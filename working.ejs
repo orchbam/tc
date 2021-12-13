@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Working</title>
+    <link rel="stylesheet"type="text/css"  href="css/bootstrap.css"/>
+    <link rel="stylesheet"type="text/css"  href="css/stylejob.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <style>
+            /* Note: Try to remove the following lines to see the effect of CSS positioning */
+            .affix {
+                top: 0;
+                width: 100%;
+                z-index: 9999 !important;
+            }
+    
+            .affix + .container-fluid {
+                padding-top: 70px;
+            }
+            </style>
+</head>
+<body>
+    <script src="http://getbootstrap.com/2.3.2/assets/js/jquery.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <nav class="main-menu">
+        <ul>
+            <li>
+                <a href="/job">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Home
+                    </span>
+                </a>  
+            </li>
+            <li>
+                <a href="/working">
+                    <i class="fa fa-history fa-2x"></i>
+                    <span class="nav-text">
+                        Working
+                    </span>
+                </a>  
+            </li>
+            
+
+        </ul>
+        <ul class="logout">
+            <li>
+               <a href="/logout">
+                     <i class="fa fa-power-off fa-2x"></i>
+                     <span class="nav-text">
+                        Logout
+                     </span>
+                     
+            </li>  
+        </ul>
+    </nav>
+
+        <div class="card" style="margin: 5%;">
+        <div class="card-header">
+            <ul class="nav nav-pills w-100">
+                <li class="nav-link">งานที่รับแล้ว nบริการรดน้ำ </li>
+                <li class="nav-link ml-auto">
+                </li>
+            </ul>
+        </div>
+
+        <div class="card-body">
+            <% if(data.length) { %>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">วันที่ต้องการรับบริการ</th>
+                            <th scope="col">ที่อยู่สำหรับให้บริการ</th>
+                            <th scope="col">ประเภทของต้นไม้</th>
+                            <th scope="col">จำนวนวัน</th>
+  
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(let i = 0; i < data.length; i++) { %>
+                            <tr>
+                                <th scope="row"><%= data[i].id %></th>
+                                <td><%= data[i].date %></td>
+                                <td><%= data[i].address %></td>
+                                <td><%= data[i].treetype %></td>
+                                <td><%= data[i].treeq %></td>
+    
+                            </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            <% } %>
+
+            <!-- if result is empty -->
+            <% if(!data.length) { %>
+                <p class="text-center">ไม่มีข้อมูล!</p>
+            <% } %>
+        </div>
+    </div>
+
+
+
+    <div class="card" style="margin: 5%;">
+        <div class="card-header">
+            <ul class="nav nav-pills w-100">
+                <li class="nav-link">งานที่รับแล้ว บริการขนส่งต้นไม้ </li>
+                <li class="nav-link ml-auto">
+                </li>
+            </ul>
+        </div>
+        
+        <div class="card-body">
+            <% if(data2.length) { %>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">จังหวัดที่ต้องรับต้นไม้</th>
+                            <th scope="col">ที่อยู่ที่ต้องไปรับต้นไม้</th>
+                            <th scope="col">จังหวัดที่ต้องส่งต้นไม้</th>
+                            <th scope="col">ที่อยู่ที่ต้องไปส่งต้นไม้</th>
+                            <th scope="col">วันที่ต้องการรับบริการ</th>
+                            <th scope="col">ราคา</th>
+            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(let i = 0; i < data2.length; i++) { %>
+                            <tr>
+                                <th scope="rows"><%= data2[i].id %></th>
+                                <td><%= data2[i].start %></td>
+                                <td><%= data2[i].address %></td>
+                                <td><%= data2[i].destination %></td>
+                                <td><%= data2[i].address2 %></td>
+                                <td><%= data2[i].date %></td>
+                                <td><%= data2[i].rate %></td>
+          
+                            </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            <% } %>
+
+            <!-- if result is empty -->
+            <% if(!data2.length) { %>
+                <p class="text-center">ไม่มีข้อมูล!</p>
+            <% } %>
+   
+        </div>
+    </div>
+
+    
+
+
+    <div class="card" style="margin: 5%;">
+        <div class="card-header">
+            <ul class="nav nav-pills w-100">
+                <li class="nav-link">งานที่รับแล้ว บริการซ่อมแซมต้นไม้ </li>
+                <li class="nav-link ml-auto">
+                </li>
+            </ul>
+        </div>
+        
+        <div class="card-body">
+            <% if(data3.length) { %>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">จังหวัดที่ต้องการใช้บริการ</th>
+                            <th scope="col">ที่อยู่ลูกค้า</th>
+                            <th scope="col">ประเภทของต้นไม้</th>
+                            <th scope="col">อาการป่วยของต้นไม้</th>
+                            <th scope="col">วันที่ต้องการรับบริการ</th>
+                            <th scope="col">ราคา</th>
+          
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(let i = 0; i < data3.length; i++) { %>
+                            <tr>
+                                <th scope="rowi"><%= data3[i].id %></th>
+                                <td><%= data3[i].province %></td>
+                                <td><%= data3[i].rp_address %></td>
+                                <td><%= data3[i].rp_treetype %></td>
+                                <td><%= data3[i].treesick %></td>
+                                <td><%= data3[i].date %></td>
+                                <td><%= data3[i].rate %></td>
+      
+                            </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            <% } %>
+
+            <!-- if result is empty -->
+            <% if(!data3.length) { %>
+                <p class="text-center">ไม่มีข้อมูล!</p>
+            <% } %>
+        </div>
+    </div>
+
+
+
+
+    <div class="card" style="margin:5%;">
+        <div class="card-header">
+            <ul class="nav nav-pills w-100">
+                <li class="nav-link">งานที่รับแล้ว บริการปรึกษาปัญหา</li>
+                <li class="nav-link ml-auto">
+                </li>
+            </ul>
+        </div>
+        
+        <div class="card-body">
+            <% if(data4.length) { %>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            
+                            <th scope="col">ID</th>
+                            <th scope="col">หมวดหมู่ปัญหา</th>
+                            <th scope="col">ปัญหาที่ลูกค้าพบ</th>
+                            <th scope="col">เบอร์โทรลูกค้า</th>
+                            <th scope="col">ราคา</th>
+                
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(let i = 0; i < data4.length; i++) { %>
+                            <tr>
+                                <th scope="rowz"><%= data4[i].id %></th>
+                                <td><%= data4[i].typeproblem %></td>
+                                <td><%= data4[i].problem %></td>
+                                <td><%= data4[i].tel %></td>
+                                <td><%= data4[i].rate %></td>
+        
+                            </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            <% } %>
+ื
+            <!-- if result is empty -->
+            <% if(!data4.length) { %>
+                <p class="text-center">ไม่มีข้อมูล!</p>
+            <% } %>
+        </div>
+    </div>
+ 
+    </body>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet"type="text/css"  href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/stylehome.css"/>
+
+
+ 
+</head>
+
+<body>
+    
+    <div class="container-fluid">
+        <div class="card">
+            <a class="banner"  ><img src="../image/LOGOTC.png"></img></a>
+            <div class="card-body ">
+                
+                    <a href="/home" class="btn btn-primary">Home</a>
+                    <a href="/service" class="btn btn-primary">Service</a>
+                    <a href="/about" class="btn btn-primary">About us</a>
+                    <a href="/contact" class="btn btn-primary">Contact</a>
+                    <a href="/logout" class="btn btn-danger">Logout</a> <!-- ตัวอย่างปุ่ม ลิงค์ไปหน้าอื่นๆ เพิ่ม Get ในหน้า index.js-->
+            </div> 
+        </div>
+        
+
+        <div class="slide-content" >
+            <img class="mySlides" src="../image/home1.png" style="width:100%">
+            <img class="mySlides" src="../image/home2.png" style="width:100%">
+            <img class="mySlides" src="../image/home3.png" style="width:100%">
+            <img class="mySlides" src="../image/home4.png" style="width:100%">
+            <img class="mySlides" src="../image/home5.png" style="width:100%">
+            <img class="mySlides" src="../image/home6.png" style="width:100%">  
+        </div>
+        <script>
+            var myIndex = 0;
+            carousel();
+            
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                   x[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}    
+                x[myIndex-1].style.display = "block";  
+                setTimeout(carousel, 1000); // Change image every 2 seconds
+            }
+            </script>
+
+            <div class="content">
+                <img src="../image/home7.png"></img>
+                <img src="../image/home8.png"></img>
+                <img src="../image/home9.png"></img>     
+            </div><br><br>
+        <div class="container">
+
+
+            <div class="service" >
+                <div class="bg-tree">
+                    <img src="../image/trees.jpg"></img>
+                </div>
+                
+                <br><h1> SERVICE DETAIL</h1>
+                
+                
+                
+  
+                <div class="service-detail" >
+                    
+                    <br><h2>บริการรดน้ำ</h2>
+                        <img src="../image/homeser1.png"></img>
+                    <p> บริการสุดฮิตของ TreeCare เพื่ออำนวยความสะดวดต่อผู้รักต้นไม้ ในการดูแลให้อาหารต้นไม้ ภายใต้คอนเซปต์<span id="dots">...</span>
+                        <span id="more">คุณดื่มน้ำ ต้นไม้ของคุณก็ดื่มน้ำ ไม่ว่าคุณจะอยู่ห่างจากต้นไม้ของคุณเพียงใด ต้นไม้ของคุณก็จะชุ่มช่ำน้ำเสมอ</span></p>
+                    <button onclick="myFunction()" id="myBtn">Read more</button>
+                </div><br>
+                
+                
+                <script>
+                    function myFunction() {
+                        var dots = document.getElementById("dots");
+                        var moreText = document.getElementById("more");
+                        var btnText = document.getElementById("myBtn");
+                        if (dots.style.display === "none") {
+                            dots.style.display = "inline";
+                            btnText.innerHTML = "Read more"; 
+                            moreText.style.display = "none";
+                        } else {
+                            dots.style.display = "none";
+                            btnText.innerHTML = "Read less"; 
+                            moreText.style.display = "inline";
+                               }
+                        }
+                    </script>
+                
+
+
+                <div class="service-detail" >
+                    <br><h2>บริการขนส่งต้นไม้</h2>
+                        <img src="../image/homeser2.png"></img>
+                    <p> อีกหนึ่งบริการของ TreeCare ที่ได้รับการตอบรับดีไม่แพ้กัน เพื่อรักษาคุณภาพและความปลอดภัยของต้นไม้และดอกไม้ หรือพืชพันธ์ุใดก็ตาม<span id="dots2">...</span>
+                        <span id="more2">ที่ท่านต้องการจะเปลี่ยนเจ้าของ จากท่านสู่เจ้าของใหม่ TreeCare ยินดีที่จะบริการท่าน ด้วยมาตรฐานการรักษาความปลอดภัย ไม่โยนต้นไม้ของท่าน จะอยู่ในการดูแลจนกว่าจะถึงเจ้าของใหม่โดยสมบูรณ์</span></p>
+                    <button onclick="myFunction2()" id="myBtn2">Read more</button>
+                </div><br>
+                
+                
+                <script>
+                    function myFunction2() {
+                        var dots = document.getElementById("dots2");
+                        var moreText = document.getElementById("more2");
+                        var btnText = document.getElementById("myBtn2");
+                        if (dots.style.display === "none") {
+                            dots.style.display = "inline";
+                            btnText.innerHTML = "Read more"; 
+                            moreText.style.display = "none";
+                        } else {
+                            dots.style.display = "none";
+                            btnText.innerHTML = "Read less"; 
+                            moreText.style.display = "inline";
+                               }
+                        }
+                    </script>
+                    <div class="bg-tree">
+                        <img src="../image/trees.jpg"></img>
+                    </div>
+
+
+
+                <div class="service-detail" >
+                    <br><h2>บริการซ่อมแซม</h2>
+                        <img src="../image/homeser3.png"></img>
+                    <p> อีกหนึ่งบริการของ TreeCare เพื่อช่วยคุณพ่อคุณแม่ต้นไม้ ที่ลูกของคุณมีอาการป่วย ทางเรามีผู้เชี่ยวชาญไปช่วยรักษาอาการอย่างทันท่วงที <span id="dots3">...</span>
+                        <span id="more3">อย่างที่ไม่มีใครคาดการณ์ได้ อย่าปล่อยให้ต้นไม้ของคุณเป็นเพียงซาก หากป่วย พวกเราช่วยคุณได้</span></p>
+                    <button onclick="myFunction3()" id="myBtn3">Read more</button>
+                </div><br>
+                
+                <script>
+                    function myFunction3() {
+                        var dots = document.getElementById("dots3");
+                        var moreText = document.getElementById("more3");
+                        var btnText = document.getElementById("myBtn3");
+                        if (dots.style.display === "none") {
+                            dots.style.display = "inline";
+                            btnText.innerHTML = "Read more"; 
+                            moreText.style.display = "none";
+                        } else {
+                            dots.style.display = "none";
+                            btnText.innerHTML = "Read less"; 
+                            moreText.style.display = "inline";
+                               }
+                        }
+                    </script>
+
+                <div class="service-detail" >
+                    <br><h2>บริการให้คำปรึกษา</h2>
+                        <img src="../image/homeser4.png"></img>
+                    <p> บริการสุดท้ายของ TreeCare หากท่านไม่ทราบว่าต้นไม้ลักษณะนี้เรียกว่าอะไรให้ถาม TreeCare<span id="dots4">...</span>
+                        <span id="more4">ทางเรามีผู้เชี่ยวชาญโทรไปหาคุณ คุณไม่จำเป็นต้องคาดเดาสิ่งที่อ่านมา ผู้เชี่ยวชาญพร้อมตอบอย่างไม่กั๊ก "อย่าให้อินเทอร์เน็ตหลอกให้คุณสับสน"</span></p>
+                    <button onclick="myFunction4()" id="myBtn4">Read more</button>
+                </div><br>
+                
+                <script>
+                    function myFunction4() {
+                        var dots = document.getElementById("dots4");
+                        var moreText = document.getElementById("more4");
+                        var btnText = document.getElementById("myBtn4");
+                        if (dots.style.display === "none") {
+                            dots.style.display = "inline";
+                            btnText.innerHTML = "Read more"; 
+                            moreText.style.display = "none";
+                        } else {
+                            dots.style.display = "none";
+                            btnText.innerHTML = "Read less"; 
+                            moreText.style.display = "inline";
+                               }
+                        }
+                    </script>
+        </div>
+   
+                        
+            </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลการชำระเงิน</title>
+    <link rel="stylesheet"type="text/css"  href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/stylepay2.css"/>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="card">
+
+            <div class="card-body ">
+
+                    <a href="/home" class="btn btn-primary">Home</a>
+                    <a href="/service" class="btn btn-primary">Service</a>
+                    <a href="/about" class="btn btn-primary">About us</a>
+                    <a href="/contact" class="btn btn-primary">Contact</a>
+                    <a href="/logout" class="btn btn-danger">Logout</a> <!-- ตัวอย่างปุ่ม ลิงค์ไปหน้าอื่นๆ เพิ่ม Get ในหน้า index.js-->
+            </div>
+        </div>    
+            <div class="formcontainer">
+                <form action="" method="post">
+                    <h1>ยืนยันการชำระเงิน</h1>
+
+                <label for="date">วันที่โอนเงินตามหลักฐานการชำระเงิน</label> 
+                <input type="date" id="p_date" name="p_date"><br><br>  
+                
+                <label for="time">เวลาที่โอนเงินตามหลักฐานการชำระเงิน</label> 
+                <input type="time" id="p_time" name="p_time"><br><br>
+                
+                <label for="bank">โอนจากธนาคาร</label>
+                <select id="bank" name="p_bank">
+                    <option value="กสิกรไทย">กสิกรไทย</option>
+                    <option value="กรุงเทพ">กรุงเทพ</option>
+                    <option value="กรุงไทย">กรุงไทย</option>
+                    <option value="กรุงศรี">กรุงศรี</option>
+                    <option value="ซีไอเอ็มบี">ซีไอเอ็มบี</option>
+                    <option value="ทีเอ็มบีธนชาต">ทีเอ็มบีธนชาต</option>
+                    <option value="ไทยพาณิชย์">ไทยพาณิชย์</option>
+                    <option value="ยูโอบี">ยูโอบี</option>
+                    <option value="ไอซีบีซี">ไอซีบีซี</option>
+                    <option value="สแตนดาร์ดฯ">สแตนดาร์ดฯ</option>
+                    <option value="ออมสิน">ออมสิน</option>
+                    <option value="เกียรตินาคิน">เกียรตินาคิน</option>
+                    <option value="ซิตี้แบงค์">ซิตี้แบงค์</option>
+                    <option value="ธ.ก.ส">ธ.ก.ส</option>
+                    <option value="ทิสโก้">ทิสโก้</option>
+                </select><br>
+
+                <label for="หมายเลขบัญชี">หมายเลขบัญชี</label>
+                <input type="text" name="p_accnum" id="p_accnum"><br>
+
+                <label for="จำนวนเงิน">จำนวนเงิน</label>
+                <input type="text" name="p_amount" id="p_amount"><br>
+
+                <label for="sel">บริการที่คุณเลือก</label>
+                <select id="s_sel" name="s_sel">
+                    <option value="บริการรดน้ำต้นไม้">บริการรดน้ำต้นไม้</option>
+                    <option value="บริการขนส่งต้นไม้">บริการขนส่งต้นไม้</option>
+                    <option value="บริการซ่อมแซมต้นไม้">บริการซ่อมแซมต้นไม้</option>
+                    <option value="บริการให้คำปรึกษาปัญหา">บริการให้คำปรึกษาปัญหา</option>
+                </select><br>    
+
+                <label for="line">โปรดระบุ Line id ของคุณเพื่อให้ผู้ให้บริการติดต่อกลับ</label>
+                <input type="text" name="l_line" id="l_line"><br>
+
+                <button type="submit" class="btn btn-success">ส่ง</button>
+
+            </form>
+                   
+</body>
+</html>
